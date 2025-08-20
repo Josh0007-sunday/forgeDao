@@ -64,8 +64,8 @@ const Dashboard: React.FC<DashboardProps> = ({ user }) => {
         try {
             // If user.id is missing, fetch all proposals as fallback
             const endpoint = user.id 
-                ? ` ${import.meta.env.VITE_SERVER_URL}/api/proposals/user/${user.id}`
-                : ` ${import.meta.env.VITE_SERVER_URL}/api/proposals'`
+                ? `${import.meta.env.VITE_SERVER_URL}/api/proposals/user/${user.id}`
+                : `${import.meta.env.VITE_SERVER_URL}/api/proposals'`
                 
             console.log('Fetching proposals from:', endpoint); // Debug log
             
@@ -131,7 +131,7 @@ const Dashboard: React.FC<DashboardProps> = ({ user }) => {
 
     const updateWalletAddress = async () => {
         try {
-            const response = await fetch(` ${import.meta.env.VITE_SERVER_URL}/api/user/wallet`, {
+            const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/api/user/wallet`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
