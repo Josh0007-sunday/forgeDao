@@ -1,5 +1,13 @@
 {
   "rewrites": [
-    {"source": "/(.*)", "destination": "/"}
+    {"source": "/(.*)", "destination": "/"},
+    {
+      "source": "/api/:path*",
+      "destination": "https://forgedao-server.onrender.com/api/:path*"
+    },
+    {
+      "source": "/auth/:path*", 
+      "destination": "https://forgedao-server.onrender.com/auth/:path*"
+    }
   ]
 }
